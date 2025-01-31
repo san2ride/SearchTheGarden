@@ -37,5 +37,5 @@ struct GardenItem: Codable {
 }
 
 struct GardenMedia: Codable, Hashable {
-    let m: String?
+    let m: String
 }

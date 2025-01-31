@@ -21,10 +21,10 @@ struct GardenGridView: View {
     var body: some View {
         NavigationView {
             LazyVGrid(columns: columns) {
-                ForEach(gardenGridViewModel.gardenItems, id: \.media) { item in
-                    NavigationLink(destination: GardenDetailView()) {
+                ForEach(gardenGridViewModel.gardenItems, id: \.media) { garden in
+                    NavigationLink(destination: GardenDetailView(gardenItem: garden)) {
                         VStack {
-                            AsyncImage(url: URL(string: item.media.m ?? "")) { image in
+                            AsyncImage(url: URL(string: garden.media.m ?? "")) { image in
                                 image.resizable()
                                     .scaledToFit()
                             } placeholder: {

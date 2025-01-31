@@ -14,6 +14,7 @@
 		F7301D6D2D4D735F008B0D49 /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7301D6C2D4D735F008B0D49 /* Garden.swift */; };
 		F7301D702D4D757A008B0D49 /* GardenGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7301D6F2D4D757A008B0D49 /* GardenGridViewModel.swift */; };
 		F7301D732D4D75D8008B0D49 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7301D722D4D75D8008B0D49 /* Constants.swift */; };
+		F7301D752D4D7AE9008B0D49 /* GardenDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7301D742D4D7AE9008B0D49 /* GardenDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		F7301D6C2D4D735F008B0D49 /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
 		F7301D6F2D4D757A008B0D49 /* GardenGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenGridViewModel.swift; sourceTree = "<group>"; };
 		F7301D722D4D75D8008B0D49 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F7301D742D4D7AE9008B0D49 /* GardenDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				F7301D612D4D730F008B0D49 /* GardenGridView.swift */,
+				F7301D742D4D7AE9008B0D49 /* GardenDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7301D752D4D7AE9008B0D49 /* GardenDetailView.swift in Sources */,
 				F7301D732D4D75D8008B0D49 /* Constants.swift in Sources */,
 				F7301D6D2D4D735F008B0D49 /* Garden.swift in Sources */,
 				F7301D662D4D730F008B0D49 /* GardenGridView.swift in Sources */,
