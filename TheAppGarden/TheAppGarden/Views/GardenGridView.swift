@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct GardenGridView: View {
-        
+    @State private var query: String = ""
+    @StateObject private var gardenGridViewModel = GardenGridViewModel()
+
     let columns = [
         GridItem(.adaptive(minimum: 100)),
         GridItem(.adaptive(minimum: 100)),
@@ -17,7 +19,33 @@ struct GardenGridView: View {
     ]
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            LazyVGrid(columns: columns) {
+                ForEach(gardenGridViewModel.gardenItems, id: \.media) { item in
+                    NavigationLink(destination: GardenDetailView()) {
+                        VStack {
+                            AsyncImage(url: URL(string: item.media.m ?? "")) { image in
+                                image.resizable()
+                                    .scaledToFit()
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            .frame(width: 100, height: 100)
+                        }
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+            }.padding()
+            .searchable(text: $query)
+            .onChange(of: query) { value in
+                if !value.isEmpty {
+                    gardenGridViewModel.performSearch(query: value)
+                } else {
+                    gardenGridViewModel.gardenItems = []
+                }
+            }
+            .navigationTitle(Titles.gardenTitle)
+        }
     }
 }
 
