@@ -9,5 +9,5 @@ import Foundation
 
 struct Titles {
     static let gardenTitle = "Garden"
-    static let gardenDetails = "GardenDetails"
+    static let gardenDetails = "Garden Details"
 }
