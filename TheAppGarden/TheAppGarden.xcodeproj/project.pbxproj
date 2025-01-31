@@ -12,6 +12,8 @@
 		F7301D662D4D730F008B0D49 /* GardenGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7301D612D4D730F008B0D49 /* GardenGridView.swift */; };
 		F7301D672D4D730F008B0D49 /* TheAppGardenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7301D622D4D730F008B0D49 /* TheAppGardenApp.swift */; };
 		F7301D6D2D4D735F008B0D49 /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7301D6C2D4D735F008B0D49 /* Garden.swift */; };
+		F7301D702D4D757A008B0D49 /* GardenGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7301D6F2D4D757A008B0D49 /* GardenGridViewModel.swift */; };
+		F7301D732D4D75D8008B0D49 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7301D722D4D75D8008B0D49 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		F7301D612D4D730F008B0D49 /* GardenGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenGridView.swift; sourceTree = "<group>"; };
 		F7301D622D4D730F008B0D49 /* TheAppGardenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheAppGardenApp.swift; sourceTree = "<group>"; };
 		F7301D6C2D4D735F008B0D49 /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
+		F7301D6F2D4D757A008B0D49 /* GardenGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenGridViewModel.swift; sourceTree = "<group>"; };
+		F7301D722D4D75D8008B0D49 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -113,6 +117,8 @@
 			children = (
 				F7301D692D4D7332008B0D49 /* Models */,
 				F7301D682D4D7315008B0D49 /* Views */,
+				F7301D6E2D4D7554008B0D49 /* ViewModels */,
+				F7301D712D4D75BE008B0D49 /* Utilitys */,
 				F7301D5F2D4D730F008B0D49 /* Preview Content */,
 				F7301D602D4D730F008B0D49 /* Assets.xcassets */,
 				F7301D622D4D730F008B0D49 /* TheAppGardenApp.swift */,
@@ -134,6 +140,22 @@
 				F7301D6C2D4D735F008B0D49 /* Garden.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F7301D6E2D4D7554008B0D49 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F7301D6F2D4D757A008B0D49 /* GardenGridViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F7301D712D4D75BE008B0D49 /* Utilitys */ = {
+			isa = PBXGroup;
+			children = (
+				F7301D722D4D75D8008B0D49 /* Constants.swift */,
+			);
+			path = Utilitys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,9 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7301D732D4D75D8008B0D49 /* Constants.swift in Sources */,
 				F7301D6D2D4D735F008B0D49 /* Garden.swift in Sources */,
 				F7301D662D4D730F008B0D49 /* GardenGridView.swift in Sources */,
 				F7301D672D4D730F008B0D49 /* TheAppGardenApp.swift in Sources */,
+				F7301D702D4D757A008B0D49 /* GardenGridViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
