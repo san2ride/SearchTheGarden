@@ -9,24 +9,24 @@ import SwiftUI
 import WebKit
 
 struct GardenDetailView: View {
-    let gardenItem: GardenItem
+    let vm: GardenViewModel
+    @StateObject private var gardenGridViewModel = GardenGridViewModel()
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: gardenItem.media.m)) { image in
+            AsyncImage(url: vm.media) { image in
                 image.resizable()
                     .scaledToFit()
             } placeholder: {
                 ProgressView()
             }
-            Text(gardenItem.title)
+            Text(vm.title)
                 .font(.largeTitle)
-            
             VStack(alignment: .center) {
-                WebView(htmlContent: gardenItem.description)
+                WebView(htmlContent: vm.description)
             }
-            Text(gardenItem.author)
-            Text("Published: \(gardenItem.formattedPublishedDate)")
+            Text(vm.author)
+            Text("Published: \(vm.published)")
         }
         .navigationTitle(Titles.gardenDetails)
         .navigationBarTitleDisplayMode(.inline)

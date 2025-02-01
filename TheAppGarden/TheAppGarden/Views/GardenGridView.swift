@@ -21,10 +21,10 @@ struct GardenGridView: View {
     var body: some View {
         NavigationView {
             LazyVGrid(columns: columns) {
-                ForEach(gardenGridViewModel.gardenItems, id: \.media) { garden in
-                    NavigationLink(destination: GardenDetailView(gardenItem: garden)) {
+                ForEach(gardenGridViewModel.gardenItems, id: \.media) { vm in
+                    NavigationLink(destination: GardenDetailView(vm: vm)) {
                         VStack {
-                            AsyncImage(url: URL(string: garden.media.m ?? "")) { image in
+                            AsyncImage(url: vm.media) { image in
                                 image.resizable()
                                     .scaledToFit()
                             } placeholder: {
@@ -39,7 +39,9 @@ struct GardenGridView: View {
             .searchable(text: $query)
             .onChange(of: query) { value in
                 if !value.isEmpty {
-                    gardenGridViewModel.performSearch(query: value)
+                    Task {
+                        await gardenGridViewModel.performSearch(query: value)
+                    }
                 } else {
                     gardenGridViewModel.gardenItems = []
                 }

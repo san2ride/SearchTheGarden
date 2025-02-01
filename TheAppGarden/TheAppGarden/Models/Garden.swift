@@ -8,10 +8,10 @@
 import Foundation
 
 struct GardenResponse: Codable {
-    let items: [GardenItem]
+    let items: [Garden]
 }
 
-struct GardenItem: Codable {
+struct Garden: Codable {
     let title: String
     let media: GardenMedia
     let description: String
